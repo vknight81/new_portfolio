@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Vince Knight</title>
@@ -13,11 +9,6 @@
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:300|Sail" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Qwigley" rel="stylesheet">
-		<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-		<script type="text/javascript">(function(){
-     		emailjs.init("vknight81_gmail_com");
-  		 })();
-		</script>
 	</head>
 	<body>
 
@@ -263,18 +254,18 @@
 							<form id="myform" method="post" action="#">
 								<div class="field half first">
 									<label for="name">Name</label>
-									<input type="text" name="name" id="name" value="" />
+									<input type="text" name="from_name" id="name" value="" />
 								</div>
 								<div class="field half">
 									<label for="email">Email</label>
-									<input type="email" name="reply_to" id="email" value="" />
+									<input type="text" name="reply_to" id="email" value="" />
 								</div>
 								<div class="field">
 									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="6"></textarea>
+									<textarea type="text" name="message_html" id="message" rows="6"></textarea>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+									<li><button type="submit" name="submit" id="submit" value="Send Message">Send Message</button></li>
 								</ul>
 							</form>
 
@@ -289,7 +280,7 @@
 								<li><a href="https://www.facebook.com/vince.knight.925" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
 								<li><a href="www.linkedin.com/in/vince-knight-434ba521" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							</ul>
-							<p>&copy; Copyright 2017</p>
+							<p id="copyrightYear">&copy; Copyright 2017</p>
 						</div>
 					</footer>
 
@@ -302,7 +293,13 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+			<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+			<script type="text/javascript">
+			   (function(){
+			      emailjs.init("user_9c0v0iRKwLubBec2b9D1j");
+			   })();
+			</script>
 
 	</body>
 </html>

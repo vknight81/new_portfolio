@@ -352,8 +352,30 @@
 
 							});
 
+							var myform = $("form#myform");
+
+							myform.submit(function(event){
+								event.preventDefault();
+
+							// Change to your service ID, or keep using the default service
+							var service_id = "default_service";
+							var template_id = "email_template";
+
+							myform.find("button").text("Sending...");
+							emailjs.sendForm(service_id,template_id,"myform")
+							.then(function(){ 
+								alert("Sent!");
+								myform.find("button").text("Send Message");
+							}, function(err) {
+								alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+								myform.find("button").text("Send Message");
+							});
+							return false;
+
+});
+
 	});
 	
-		emailjs.send("vknight81_gmail_com","template_VmkfmTZk",{name: "", reply_to: "", message:""});
+		
 
 })(jQuery);
